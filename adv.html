@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title> 
+        <link rel="stylesheet"  href="styles.css">      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">     
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-2"> 
+                    <img src = "OIG1.jpg" alt="google" style="display: block; margin: auto; width: 80%;" >                   
+                </div>  
+                <div class = "col-5">
+
+                </div>        
+                <div class="col-5">
+                    <a href ="index.html"> Google Search </a>
+                </div>
+            </div>  
+            <div class="col-2"> 
+                <br/><br/><br/>
+                 <h5> Find pages with </h5> 
+         </div>                                       
+        </div>
+        <br/> <br/>
+
+        <div class="container">
+            <div class="row " >
+                <div class="col-3">
+                	all these words  <br/> <br/>
+                	this exact word or phrase  <br/> <br/>
+                	any of these words <br/> <br/>
+                	none of these words            	                  
+                </div>
+                <div class="col-4 ">
+                	<form method="get" action="https://www.google.com/search">                        
+                     	<input class="input1" type="text" id="q1" > <br/><br/>
+                     	<input class="input1" type="text" id="q2" > <br/><br/>
+                     	<input class="input1" type="text" id="q3" > <br/><br/>
+                     	<input class="input1" type="text" id="q4" > <br/><br/> 
+                        <input class="input1" type="hidden" id="q5"  name = "q" >                                                                 	
+                        <input class = "input2" type="submit" onclick="myFunction()" value="Advanced Search">	
+                        <script>
+                            function myFunction() {
+                                const q11 = document.getElementById("q1").value;
+                                const q12 = document.getElementById("q2").value;
+                                const q13 = document.getElementById("q3").value;
+                                const q14 = document.getElementById("q4").value;
+                                const q15 = q11 + " " + q13 + ' "' + q12 + '" -' +q14;
+                                document.getElementById("q5").value = q15;
+                            }
+                        </script>                              
+                    </form>                                          
+                </div>
+            </div>                               
+        </div>
+    </body>
+</html>
